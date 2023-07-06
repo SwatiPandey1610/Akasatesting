@@ -1,0 +1,69 @@
+{
+  "bookFlight": "Book a flight",
+  "checkIn": "Check-in",
+  "manageBooking": "My Bookings",
+  "tripType": "One Way",
+  "originCity": "AMD",
+  "destinationCity": "BOM",
+  "bookingSuccessMessage": "Booking Successful",
+  "modifyBooking": "Modify Booking",
+  "checkInSummary": "Check-in for",
+  "checkInAddOns": "Select Add-Ons",
+  "checkInSeatSelect": "Select Your Seat",
+  "healthDeclaration": "Health & contact declaration",
+  "dangerousGoods": "Prohibited Items for air travel",
+  "checkInSuccess": "Check-in Successful",
+  "chooseDate": "Choose date",
+  "searchFlights": "Search Flights",
+  "passengers": "Passenger(s)",
+  "from": "From",
+  "done": "Done",
+  "price": "Price",
+  "select": "Select",
+  "continue": "Continue",
+  "noThanks": "No, Thanks",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "gender": "Gender",
+  "phoneNumberPlaceholder": "1 (702) 123-4567",
+  "phoneNumber": "Mobile Number",
+  "age": "Age",
+  "destinationAddress": "Destination Address",
+  "pinCode": "Destination Pincode",
+  "emailId": "Email ID",
+  "skip": "Skip",
+  "whosTravelling": "Who's Travelling",
+  "makePayment": "Make Payment",
+  "selectAddons": "Select Add-Ons",
+  "selectYourSeat": "Select Your Seat",
+  "confirmSeats": "Confirm Seat(s)",
+  "iAgree": "I agree",
+  "paxType": {
+    "ADT": "Adult(s)",
+    "CHD": "Children",
+    "SNR": "Senior Citizen",
+    "INF": "Infant(s)"
+  },
+  "to": "To",
+  "paxData": [
+    {
+      "group": "Adult(s)",
+      "headCount": "1"
+    }
+  ],
+  "paxName": [
+    {
+      "firstName": "Test",
+      "lastName": "Dummy",
+      "gender": "Male"
+    }
+  ],
+  "passengerContactDetails": {
+    "phoneNumber": "9182892275",
+    "email": "renukaprasad@codewalnut.com",
+    "age": "22",
+    "address": "Delhi",
+    "pinCode": "515212",
+    "shortPhoneNumber": "9182892275"
+  }
+}
