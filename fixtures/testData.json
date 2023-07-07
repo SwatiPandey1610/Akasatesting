@@ -53,17 +53,23 @@
   ],
   "paxName": [
     {
-      "firstName": "Test",
-      "lastName": "Dummy",
+      "firstName": "sreenath",
+      "lastName": "chadive",
       "gender": "Male"
     }
   ],
   "passengerContactDetails": {
-    "phoneNumber": "9182892275",
-    "email": "renukaprasad@codewalnut.com",
+    "phoneNumber": "8074644612",
+    "email": "sreenath.chadive@gmail.com",
     "age": "22",
     "address": "Delhi",
     "pinCode": "515212",
-    "shortPhoneNumber": "9182892275"
-  }
+    "shortPhoneNumber": "8074644612"
+  },
+  "roundTrip": "Round Trip",
+  "flexi": "Flexi",
+  "selectComplimentaryMeal": "Select your complimentary meal",
+  "secondPaxFname": "Renu",
+  "secondPaxLastName": "Kote",
+  "confirm": "Confirm"
 }

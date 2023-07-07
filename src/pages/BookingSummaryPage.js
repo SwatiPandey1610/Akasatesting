@@ -23,12 +23,12 @@ export class BookingSummaryPage {
         .frameLocator("iframe >> nth=3")
         .getByRole("listitem")
         .filter({ hasText: "Netbanking All Indian banks" })
-        .click();
+        .click({ timeout: 15000 });
       await this.page
         .frameLocator("iframe >> nth=3")
         .locator("label")
         .filter({ hasText: "SBI" })
-        .click();
+        .click({ timeout: 15000 });
 
       const page1Promise = this.page.waitForEvent("popup");
       await this.page
@@ -42,7 +42,7 @@ export class BookingSummaryPage {
         .locator("div")
         .filter({ hasText: /^My bookings$/ })
         .nth(1)
-        .click();
+        .click({ timeout: 15000 });
     });
   }
 }

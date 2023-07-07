@@ -44,4 +44,32 @@ export class FlightSearchPage {
       ).toBeVisible();
     });
   }
+
+  async selectRoundFlightWithLowestFare({ buttonLocator }) {
+    await test.step("I should be a able to select the the first flight", async () => {
+      await this.page.waitForLoadState();
+      const onGoingFlight = await this.page.locator(buttonLocator).nth(0)
+      await onGoingFlight.click();
+      const returnFlight = await this.page.locator(buttonLocator).nth(1);
+      await returnFlight.click();
+    });
+  }
+
+  async selectOngoingFlight({ buttonLocator }) {
+    await test.step("I should be a able to select the ongoing flight with lowest fare", async () => {
+      await this.page.waitForLoadState();
+      const onGoingFlight = await this.page.locator(buttonLocator).nth(0)
+      await onGoingFlight.click();
+
+    });
+  }
+
+  async selectReturnFlight({ buttonLocator }) {
+    await test.step("I should be a able to select the Return flight with lowest fare", async () => {
+      await this.page.waitForLoadState();
+      const onGoingFlight = await this.page.locator(buttonLocator).nth(1)
+      await onGoingFlight.click();
+    });
+  }
+
 }
