@@ -1,5 +1,5 @@
 {
-  "name": "Akasa automation",
+  "name": "akasa-automation",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -34,7 +34,7 @@
     "@typescript-eslint/parser": "^5.49.0",
     "autoprefixer": "^10.4.13",
     "cypress": "^12.4.1",
-    "eslint": "8.32.0",
+    "eslint": "^8.32.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-next": "13.1.5",

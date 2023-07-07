@@ -11,4 +11,14 @@ export class AddOnsPage {
       await this.page.waitForLoadState();
     });
   }
+
+  async skipComplimentaryMeal({ buttonText }) {
+    await test.step("Cancel Complimentary Meal", async () => {
+      await this.page
+        .getByRole("heading", { name: buttonText })
+        .getByRole("img")
+        .click();
+    });
+  }
+
 }

@@ -15,7 +15,7 @@ const config = {
   outputDir: "test-report/",
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    baseURL: "https://prjbt.akasaair.com/",
+    baseURL: "https://qatesting.d3bhy9n779jun9.amplifyapp.com/",
     browserName: "firefox", //chromium, firefox, webkit.
     headless: false,
     screenshot: "on",

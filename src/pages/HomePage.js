@@ -4,6 +4,7 @@ export class HomePage {
   constructor(page) {
     this.page = page;
     this.selectOption = page.locator("[class*='Booking_popper'] li");
+    this.searchPanelContainer = page.locator("#search_panel_container div")
   }
 
   async validatePanelName({ panelName }) {
@@ -91,4 +92,73 @@ export class HomePage {
       await this.page.getByRole("button", { name: buttonText }).click();
     });
   }
+
+  async selectRoundTrip({ tripType }) {
+    await test.step(`I want to book a ${tripType} flight ticket`, async () => {
+      await this.page.getByRole("radio", { name: tripType }).click();
+      await expect(
+        this.page.getByRole("radio", { name: tripType }).isChecked(),
+      ).toBeTruthy();
+    });
+  }
+
+  async returnDate({ dateLabel, journeyType, journeyDate }) {
+    await test.step(`I should be able to pick the return date from the calendar`, async () => {
+      await this.searchPanelContainer
+        .filter({ hasText: journeyType })
+        .getByRole("button", { name: dateLabel })
+        .click();
+
+      await this.page
+        .getByRole("gridcell", { name: new Date().getDate() + journeyDate })
+        .click();
+    });
+  }
+
+  async selectTwoAdults({ filterText }) {
+    await test.step(`I should be able to select the passengers`, async () => {
+      await this.page
+        .getByRole("button", {
+          name: "Passenger(s) 1 Adult Down Arrow",
+        })
+        .click();
+      await this.page
+        .locator("div")
+        .filter({ hasText: filterText })
+        .getByRole("button")
+        .nth(1)
+        .click();
+      await this.page.getByRole("button", { name: "Done" }).click();
+    });
+  }
+
+  async selectSeniorCitizenAndInfant() {
+    await test.step(`user should be able to select one  senior citizen and one infant`, async () => {
+      await this.page
+        .getByRole("button", {
+          name: "Passenger(s) 1 Adult Down Arrow",
+        })
+        .click();
+      await this.page
+        .locator("div")
+        .filter({ hasText: /^Senior CitizenAge 60 and above0$/ })
+        .getByRole("button")
+        .nth(1)
+        .click();
+      await this.page
+        .locator("div")
+        .filter({ hasText: /^Infant\(s\)7 days to 2 years\. No seat0$/ })
+        .getByRole("button")
+        .nth(1)
+        .click();
+      await this.page
+        .locator("div")
+        .filter({ hasText: /^Adult\(s\)Age above 121$/ })
+        .getByRole("button")
+        .first()
+        .click();
+      await this.page.getByRole("button", { name: "Done" }).click();
+    });
+  }
+
 }

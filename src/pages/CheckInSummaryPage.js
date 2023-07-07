@@ -20,6 +20,12 @@ export class CheckInSummaryPage {
     });
   }
 
+  async selectAllPassenger({ buttonText }) {
+    await test.step(`should select the all passenger checkbox`, async () => {
+      await this.page.getByRole('checkbox', { name: buttonText }).check();
+    })
+  }
+
   async navigateToCheckInAddonsPage({ buttonText }) {
     await test.step(`should take the user to check-in add-ons page`, async () => {
       await this.page.getByRole("button", { name: buttonText }).click();
