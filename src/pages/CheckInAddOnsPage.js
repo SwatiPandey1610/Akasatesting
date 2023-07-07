@@ -16,4 +16,10 @@ export class CheckInAddOnsPage {
       await this.page.getByRole("button", { name: buttonText }).click();
     });
   }
+
+  async selectReturnTrip({ buttonText }) {
+    await test.step(`should select a round trip  return seat`, async () => {
+      await this.page.getByText(buttonText).click();
+    });
+  }
 }
