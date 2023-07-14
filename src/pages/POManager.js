@@ -3,6 +3,7 @@ import { AddPassengerDetailsPage } from "./AddPassengerDetails";
 import { BookingSuccessPage } from "./BookingSuccessPage";
 import { BookingSummaryPage } from "./BookingSummaryPage";
 import { CheckInAddOnsPage } from "./CheckInAddOnsPage";
+import { CheckInPanel } from "./CheckInPanel";
 import { CheckInSeatSelectPage } from "./CheckInSeatSelectPage";
 import { CheckInSuccessfulPage } from "./CheckInSuccessfulPage";
 import { CheckInSummaryPage } from "./CheckInSummaryPage";
@@ -48,4 +49,6 @@ export class POManager {
   getDangerousGoodsPage = () => new DangerousGoodsPage(this.page);
 
   getCheckInSuccessfulPage = () => new CheckInSuccessfulPage(this.page);
+
+  getCheckinPanel = () => new CheckInPanel(this.page);
 }

@@ -15,6 +15,7 @@ export class HomePage {
         .getByRole("paragraph")
         .filter({ hasText: panelName })
         .click();
+      await this.page.waitForLoadState();
     });
   }
 
